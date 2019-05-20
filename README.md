@@ -2,8 +2,10 @@
 Simple Movie Database using Angular
 
 Hey People
-its doug again
-STack I used 
+its doug again!!!
+
+
+Tech Stack 
 
  HTML
 - CSS
