@@ -1,0 +1,30 @@
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<div ng-controller="LocationsController">
+<h3 class="header"> Locations </h3>
+<div class=container>
+	Search: <input type="text" ng-model="search_text" class="search_box"/> 
+</div>
+<div ng-repeat="location in location_data | filter:search_text" class="text_color">
+
+	<div class="col-sm-4">
+	<br>
+	Location Name : {{location.name}}
+	<br>
+	Climate : {{location.climate}}
+	<br>
+	Terrain : {{location.terrain}}
+	<br>
+	Surface Water : {{location.surface_water}}
+	<br>
+</div>
+</div>
+</div>

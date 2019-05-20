@@ -1,0 +1,47 @@
+
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<div ng-controller="FilmsController">
+<h3 class="header"> Films </h3>
+<div class=container>
+	Search: <input type="text" ng-model="search_text" class="search_box"/> 
+</div>
+<div ng-repeat="film in films_data | filter:search_text" class="text_color">
+	
+	<div class="col-sm-4=6">
+		<br>
+		<div class="table-responsive">
+  <table class="table table-striped">
+  	<thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Director</th>
+        <th>Producer</th>
+        <th>Release Date</th>
+      </tr>
+    </thead>
+    <tbody>
+  	  <tr>
+	<td>{{film.title}}</b> </td>
+	<td>{{film.description}}</td>
+	<td>{{film.director}}</td>
+	<td>{{film.producer}}</td>
+	<td>{{film.release_date}}</td>
+	  <tr>
+	  	</tbody>
+
+</table>
+</div>
+	</div>
+
+</div>
+</div>

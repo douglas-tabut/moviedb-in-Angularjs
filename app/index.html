@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="Studio">
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css"></link>
+    <!-- <script src="angular.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <style>
+    .capitalize {
+        text-align: center;
+        text-transform: capitalize;
+    }
+    </style>
+</head>
+
+<body ng-controller="StudioController as studio">
+    <span>
+        <a href="#/!">Home</a> 
+        <span ng-repeat="tab in studio.tabs">
+       <a href="#!{{tab.domain}}" class="capitalize">{{tab.domain}}</a>
+           
+        </span>
+    </span>
+  
+    <br>
+    
+    <div ng-view></div>
+</body>
+
+</html>
